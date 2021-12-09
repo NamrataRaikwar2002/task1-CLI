@@ -1,6 +1,5 @@
 var user=require("readline-sync");
 const chalk = require("chalk");
-console.log(chalk.blue('Hello world!'));
 var name=user.question(chalk.red("what's your name? "));
 console.log(chalk.blue("welcome "+name+" Do you know Namrata? "));
 var score=0;
@@ -26,15 +25,18 @@ for (i of ques){
 if (score>=10){
     console.log(chalk.green("wow!you know all about Namrata!"))
 }
-
-else{
-    console.log(chalk.red("game over! your score is",score))
+if (score==0){
+    console.log("Game over! your score is",score )
 }
 
+else{
+    console.log(chalk.red("game over!"))
+
+}
 var highScore=[{name:"Bhoomi",gameScore:'8'},{name:"Neetu",gameScore:"6"}]
 
 for(var a of highScore){
     console.log(a.name+"'s score is", a.gameScore);
 
 }
-console.log(chalk.cyan("if you have beaten the score send me screenshot"));
+console.log(chalk.cyan("if you have beaten the score send me screenshot"))
